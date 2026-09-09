@@ -1,1 +1,6 @@
-print("Hello from my CI/CD project!")
+def add(a, b):
+    return a + b
+
+
+if __name__ == "__main__":
+    print("Hello from my CI/CD project!")
