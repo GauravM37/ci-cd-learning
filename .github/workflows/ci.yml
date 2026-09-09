@@ -3,6 +3,8 @@ name: Python CI
 on:
   push:
   pull_request:
+env:
+  ENVIRONMENT: testing
 
 jobs:
 
@@ -12,6 +14,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Show environment
+        run: echo "Environment is $ENVIRONMENT"
 
       - name: Set up Python
         uses: actions/setup-python@v5
