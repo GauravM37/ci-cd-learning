@@ -18,6 +18,13 @@ jobs:
       - name: Show environment
         run: echo "Environment is $ENVIRONMENT"
 
+      - name: Show branch information
+        run: echo "Branch reference is $GITHUB_REF"
+
+      - name: Main branch message
+        if: github.ref == 'refs/heads/main'
+        run: echo "This is the main branch"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
