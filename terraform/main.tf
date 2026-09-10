@@ -10,4 +10,4 @@ terraform {
 resource "local_file" "example" {
   filename = "example.txt"
   content  = "Hello from Terraform CI/CD"
-}}
+}
